@@ -1,0 +1,47 @@
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+@if $enable-grid-classes {
+  .container { // stylelint-disable-line rscss/class-format
+    @include make-container;
+    @include make-container-max-widths;
+  }
+}
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but with 100% width for
+// fluid, full width layouts.
+
+@if $enable-grid-classes {
+  .container-fluid {
+    @include make-container;
+  }
+}
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+@if $enable-grid-classes {
+  .row { // stylelint-disable-line rscss/class-format
+    @include make-row;
+  }
+}
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@if $enable-grid-classes {
+  @include make-grid-columns;
+}
+
+// Parents with nested content
+
+@if $enable-grid-classes {
+  .nest-parent {
+    @include make-nest-parent;
+  }
+}

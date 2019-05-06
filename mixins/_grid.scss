@@ -1,0 +1,46 @@
+@mixin make-container($gutter: $grid-gutter-width) {
+  width: 100%;
+  // padding-right: $gutter / 2;
+  // padding-left: $gutter / 2;
+  margin-right: auto;
+  margin-left: auto;
+
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+}
+
+// For each breakpoint, define the maximum width of the container in a media query
+@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      max-width: $container-max-width;
+    }
+  }
+}
+
+@mixin make-row($columns: $grid-columns) {
+  grid-column: 1 / span #{$columns};
+}
+
+@mixin make-col($size, $gutter: $grid-gutter-width) {
+  @include set-col-grid-column($size);
+  padding-right: $gutter / 2;
+  padding-left: $gutter / 2;
+}
+
+@mixin set-col-grid-column($size) {
+  grid-column: span $size;
+}
+
+@mixin make-col-start($start, $columns: $grid-columns) {
+  // https://github.com/rachelandrew/cssgrid-ama/issues/127#issuecomment-371120832
+  // https://codepen.io/stavros-liaskos/pen/GGRjVZ?editors=1100
+  grid-column: #{$start} / span #{$columns};
+}
+
+@mixin make-nest-parent($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  padding-right: 0;
+  padding-left: 0;
+}

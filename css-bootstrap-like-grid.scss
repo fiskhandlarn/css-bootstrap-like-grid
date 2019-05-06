@@ -1,0 +1,31 @@
+/*!
+ * CSS Bootstrap-like Grid (https://github.com/fiskhandlarn/cssbootstraplikegrid)
+ * Copyright Oskar Joelson <oskar@joelson.org>
+ * Licensed under MIT
+ */
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// bootstrap
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+
+@import 'mixins/grid-framework';
+@import 'mixins/grid';
+
+@import 'grid';
+
+// TODO needed?
+// @import 'utilities/display';
+// @import 'utilities/flex';
+// @import 'utilities/spacing';
