@@ -15,7 +15,7 @@ This library uses the same variables as Bootstrap (`$grid-columns`, `$grid-gutte
 
 ## Unsupported Bootstrap features
 - [Auto width columns](https://getbootstrap.com/docs/4.3/layout/grid/#auto-layout-columns) (`col`, `col-auto`, `col-*-auto`)
-- [Vertical alignment](https://getbootstrap.com/docs/4.3/layout/grid/#vertical-alignment) and [Horizontal alignment](https://getbootstrap.com/docs/4.3/layout/grid/#horizontal-alignment) (since we don't have rows) (`align-items-*`, `align-self-*`, `justify-content-*`)
+- [Vertical alignment](https://getbootstrap.com/docs/4.3/layout/grid/#vertical-alignment) and [horizontal alignment](https://getbootstrap.com/docs/4.3/layout/grid/#horizontal-alignment) (since we don't have rows) (`align-items-*`, `align-self-*`, `justify-content-*`)
 - [Offset classes](https://getbootstrap.com/docs/4.3/layout/grid/#offset-classes) (use `start-*` instead)
 - [Margin utilities](https://getbootstrap.com/docs/4.3/layout/grid/#margin-utilities) (`m*-auto`)
 - [Nested](https://getbootstrap.com/docs/4.3/layout/grid/#nesting) content other than other columns
