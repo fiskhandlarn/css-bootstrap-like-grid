@@ -6,6 +6,20 @@ Native CSS grid classes and SCSS mixins with (nearly) the same syntax as [Bootst
 
 This library uses the same variables as Bootstrap (`$grid-columns`, `$grid-gutter-width`, `$grid-breakpoints`, `$container-max-widths`).
 
+## Installation
+
+Install this package, with [npm](https://www.npmjs.com/), in the root directory of your project.
+
+```bash
+$ npm install @fiskhandlarn/css-bootstrap-like-grid --save-dev
+```
+
+Import it in your SCSS:
+
+```scss
+@import '@fiskhandlarn/css-bootstrap-like-grid';
+```
+
 ## Classes/mixins
 - `.container`/`make-container` + `make-container-max-widths`
 - `.container-fluid`/`make-container`
