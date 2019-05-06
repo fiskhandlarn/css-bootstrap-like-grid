@@ -1,5 +1,7 @@
 # CSS Bootstrap-like grid
 
+![css-bootstrap-like-grid](https://user-images.githubusercontent.com/680264/57221264-c8a2ce80-6ffe-11e9-9754-34f19fac548a.png)
+
 Native CSS grid classes and mixins with (nearly) the same syntax as [Bootstrap grid](https://getbootstrap.com/docs/4.3/layout/grid/).
 
 This library uses the same variables as Bootstrap (`$grid-columns`, `$grid-gutter-width`, `$grid-breakpoints`, `$container-max-widths`).
