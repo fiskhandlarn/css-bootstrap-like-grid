@@ -1,0 +1,26 @@
+{
+  "name": "@fiskhandlarn/css-bootstrap-like-grid",
+  "version": "0.1.0",
+  "description": "Native CSS grid classes and SCSS mixins with (nearly) the same syntax as Bootstrap grid",
+  "main": "css-bootstrap-like-grid.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiskhandlarn/css-bootstrap-like-grid.git"
+  },
+  "keywords": [
+    "css",
+    "grid",
+    "scss",
+    "scss-mixins",
+    "bootstrap"
+  ],
+  "author": "Oskar Joelson <oskar@joelson.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fiskhandlarn/css-bootstrap-like-grid/issues"
+  },
+  "homepage": "https://github.com/fiskhandlarn/css-bootstrap-like-grid#readme"
+}
