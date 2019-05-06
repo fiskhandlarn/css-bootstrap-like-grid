@@ -2,7 +2,7 @@
 
 ![css-bootstrap-like-grid](https://user-images.githubusercontent.com/680264/57221368-449d1680-6fff-11e9-8b21-185fe7f9ad74.png)
 
-Native CSS grid classes and mixins with (nearly) the same syntax as [Bootstrap grid](https://getbootstrap.com/docs/4.3/layout/grid/).
+Native CSS grid classes and SCSS mixins with (nearly) the same syntax as [Bootstrap grid](https://getbootstrap.com/docs/4.3/layout/grid/).
 
 This library uses the same variables as Bootstrap (`$grid-columns`, `$grid-gutter-width`, `$grid-breakpoints`, `$container-max-widths`).
 
