@@ -34,7 +34,7 @@
   }
 }
 
-@mixin make-ie-row-after($columns: $grid-columns) {
+@mixin make-fallback-row-after($columns: $grid-columns) {
   margin-right: percentage($columns / $grid-columns);
 
   @supports (display: grid) {
@@ -42,7 +42,7 @@
   }
 }
 
-@mixin make-ie-row-after-disable() {
+@mixin make-fallback-row-after-disable() {
   margin-right: 0;
 }
 
@@ -76,7 +76,7 @@
   }
 }
 
-@mixin make-ie-col-offset($start, $columns: $grid-columns) {
+@mixin make-fallback-col-offset($start, $columns: $grid-columns) {
   margin-left: percentage($start / $grid-columns);
 
   @supports (display: grid) {

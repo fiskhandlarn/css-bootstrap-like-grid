@@ -1,5 +1,5 @@
 @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
-  // Common properties for all breakpoints
+  // Common propertfallbacks for all breakpoints
   %grid-column {
     @include set-col-grid-column(12);
     padding-right: $gutter / 2;
@@ -12,8 +12,8 @@
       @include make-row($j);
     }
 
-    .ie-row-after-#{$j} { // stylelint-disable-line rscss/class-format
-      @include make-ie-row-after($j);
+    .fallback-row-after-#{$j} { // stylelint-disable-line rscss/class-format
+      @include make-fallback-row-after($j);
     }
   }
 
@@ -59,8 +59,8 @@
         }
 
         @if not ($infix == '' and $i == 0) { // Avoid emitting useless .offset-0
-          .ie-col-offset#{$infix}-#{$i} { // stylelint-disable-line rscss/class-format
-            @include make-ie-col-offset($i, $columns);
+          .fallback-col-offset#{$infix}-#{$i} { // stylelint-disable-line rscss/class-format
+            @include make-fallback-col-offset($i, $columns);
           }
         }
       }
@@ -71,12 +71,12 @@
             @include make-row($j);
           }
 
-          .ie-row-after#{$infix}-#{$j} { // stylelint-disable-line rscss/class-format
-            @include make-ie-row-after($j);
+          .fallback-row-after#{$infix}-#{$j} { // stylelint-disable-line rscss/class-format
+            @include make-fallback-row-after($j);
           }
 
-          .ie-row-after#{$infix}-disable { // stylelint-disable-line rscss/class-format
-            @include make-ie-row-after-disable;
+          .fallback-row-after#{$infix}-disable { // stylelint-disable-line rscss/class-format
+            @include make-fallback-row-after-disable;
           }
         }
       }
