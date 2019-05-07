@@ -46,3 +46,10 @@ Import it in your SCSS:
 If CSS grid [isn't supported](https://caniuse.com/#feat=css-grid) this library uses a flex fallback. If you need to support these browsers you need to:
 - Add `fallback-row-after-*`/`fallback-row-after-*-*`/`fallback-row-after-*-disable` classes or use `make-fallback-row-after`/`make-fallback-row-after-disable` mixins on all columns preceeding columns using `.row`/`make-row`
 - Add `fallback-col-offset-*`/`fallback-col-offset-*-*` classes or use `make-fallback-col-offset` mixin everywhere `.col-start-*-*`/`make-col-start` is used (please note that the offset number should be used in the same manner as in [Bootstrap](https://getbootstrap.com/docs/4.3/layout/grid/#offset-classes))
+
+
+## Browsers support
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png" alt="iOS Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>iOS Safari |
+| --------- | --------- | --------- | --------- | --------- |
+| last 2 versions| last 2 versions| IE11, Edge| last 2 versions| last 2 versions
