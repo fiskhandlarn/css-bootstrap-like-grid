@@ -1,10 +1,8 @@
 @charset 'UTF-8';
 
-/*!
- * CSS Bootstrap-like Grid (https://github.com/fiskhandlarn/cssbootstraplikegrid)
- * Copyright Oskar Joelson <oskar@joelson.org>
- * Licensed under MIT
- */
+// CSS Bootstrap-like Grid (https://github.com/fiskhandlarn/cssbootstraplikegrid)
+// Copyright Oskar Joelson <oskar@joelson.org>
+// Licensed under MIT
 
 html {
   box-sizing: border-box;
@@ -26,8 +24,3 @@ html {
 @import 'mixins/grid';
 
 @import 'grid';
-
-// TODO needed?
-// @import 'utilities/display';
-// @import 'utilities/flex';
-// @import 'utilities/spacing';
