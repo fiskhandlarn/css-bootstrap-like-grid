@@ -53,9 +53,4 @@ If CSS grid [isn't supported](https://caniuse.com/#feat=css-grid) this library u
 | --------- | --------- | --------- | --------- | --------- |
 | last 2 versions| last 2 versions| IE11, Edge| last 2 versions| last 2 versions
 
-## Examples
-
-<iframe height="265" style="width: 100%;" scrolling="no" title="CSS Bootstrap-like grid example" src="//codepen.io/fiskhandlarn/embed/vwOOdJ/?height=265&theme-id=0&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/fiskhandlarn/pen/vwOOdJ/'>CSS Bootstrap-like grid example</a> by fiskhandlarn
-  (<a href='https://codepen.io/fiskhandlarn'>@fiskhandlarn</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+## [Examples](https://codepen.io/fiskhandlarn/pen/vwOOdJ)
