@@ -31,7 +31,7 @@ Import it in your SCSS:
 - `.col-*`, `col-*-*`/`make-col` (`make-col-ready` is not needed)
 - `.row`/`make-row` (usually not needed, can be set on a `.col` to force that `.col` down on the next row)
 - `.nest-parent`/`make-nest-parent` (must be set on a `.col` that contains other (nested) `.col`'s)
-- `.col-start-*-*`/`make-col-start` (used instead of `offset-*-*`/`make-col-offset`)
+- `.col-start-*-*`/`make-col-start` (used instead of `offset-*-*`/`make-col-offset`, the start number should be where the column should start and not the offset from the preceeding column)
 - `order-*-first`, `order-*-last`, `order-*-*`,
 
 ## Unsupported Bootstrap features
@@ -40,3 +40,9 @@ Import it in your SCSS:
 - [Offset classes](https://getbootstrap.com/docs/4.3/layout/grid/#offset-classes) (use `start-*` instead)
 - [Margin utilities](https://getbootstrap.com/docs/4.3/layout/grid/#margin-utilities) (`m*-auto`)
 - [Nested](https://getbootstrap.com/docs/4.3/layout/grid/#nesting) content other than other columns
+
+## Browsers without grid support
+
+If CSS grid [isn't supported](https://caniuse.com/#feat=css-grid) this library uses a flex fallback. If you need to support these browsers you need to:
+- Add `fallback-row-after-*`/`fallback-row-after-*-*`/`fallback-row-after-*-disable` classes or use `make-fallback-row-after`/`make-fallback-row-after-disable` mixins on all columns preceeding columns using `.row`/`make-row`
+- Add `fallback-col-offset-*`/`fallback-col-offset-*-*` classes or use `make-fallback-col-offset` mixin everywhere `.col-start-*-*`/`make-col-start` is used (please note that the offset number should be used in the same manner as in [Bootstrap](https://getbootstrap.com/docs/4.3/layout/grid/#offset-classes))
