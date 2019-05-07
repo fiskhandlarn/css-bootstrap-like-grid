@@ -1,7 +1,8 @@
+styleguide: plataformatec/linters
 engines:
-  rubocop:
+  fixme:
     enabled: true
   scss-lint:
     enabled: true
-  exclude_paths:
-    - node_modules
+exclude_paths:
+  - node_modules
