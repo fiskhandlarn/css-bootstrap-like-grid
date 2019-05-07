@@ -47,9 +47,17 @@ If CSS grid [isn't supported](https://caniuse.com/#feat=css-grid) this library u
 - Add `fallback-row-after-*`/`fallback-row-after-*-*`/`fallback-row-after-*-disable` classes or use `make-fallback-row-after`/`make-fallback-row-after-disable` mixins on all columns preceeding columns using `.row`/`make-row`
 - Add `fallback-col-offset-*`/`fallback-col-offset-*-*` classes or use `make-fallback-col-offset` mixin everywhere `.col-start-*-*`/`make-col-start` is used (please note that the offset number should be used in the same manner as in [Bootstrap](https://getbootstrap.com/docs/4.3/layout/grid/#offset-classes))
 
-
 ## Browsers support
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png" alt="iOS Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>iOS Safari |
 | --------- | --------- | --------- | --------- | --------- |
 | last 2 versions| last 2 versions| IE11, Edge| last 2 versions| last 2 versions
+
+## Examples
+
+<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result" data-user="fiskhandlarn" data-slug-hash="vwOOdJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Bootstrap-like grid example">
+  <span>See the Pen <a href="https://codepen.io/fiskhandlarn/pen/vwOOdJ/">
+  CSS Bootstrap-like grid example</a> by fiskhandlarn (<a href="https://codepen.io/fiskhandlarn">@fiskhandlarn</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
