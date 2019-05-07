@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.2.1 (released 2019-05-07)
+
+- Added link to example codepen
+
 ## 0.2.0 (released 2019-05-07)
 
 - Added flex fallback classes/mixins

@@ -1,6 +1,6 @@
 {
   "name": "@fiskhandlarn/css-bootstrap-like-grid",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Native CSS grid classes and SCSS mixins with (nearly) the same syntax as Bootstrap grid",
   "main": "css-bootstrap-like-grid.scss",
   "scripts": {
