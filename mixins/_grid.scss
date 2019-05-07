@@ -3,8 +3,15 @@
   margin-right: auto;
   margin-left: auto;
 
-  display: grid;
-  grid-template-columns: repeat($grid-columns, 1fr);
+  // https://seesparkbox.com/foundry/css_grid_layout_guide_with_flexbox_fallbacks
+  display: flex;
+  flex-wrap: wrap;
+
+  @supports (display: grid) {
+    flex-wrap: nowrap;
+    display: grid; // stylelint-disable-line declaration-block-no-duplicate-properties
+    grid-template-columns: repeat($grid-columns, 1fr);
+  }
 }
 
 // For each breakpoint, define the maximum width of the container in a media query
@@ -17,7 +24,26 @@
 }
 
 @mixin make-row($columns: $grid-columns) {
-  grid-column: 1 / span #{$columns};
+  flex-basis: percentage($columns / $grid-columns);
+  max-width: percentage($columns / $grid-columns); // https://github.com/policygenius/athenaeum/pull/328#issue-142244052
+
+  @supports (display: grid) {
+    flex-basis: auto;
+    max-width: none;
+    grid-column: 1 / span #{$columns};
+  }
+}
+
+@mixin make-ie-row-after($columns: $grid-columns) {
+  margin-right: percentage($columns / $grid-columns);
+
+  @supports (display: grid) {
+    margin-right: 0;
+  }
+}
+
+@mixin make-ie-row-after-disable() {
+  margin-right: 0;
 }
 
 @mixin make-col($size, $gutter: $grid-gutter-width) {
@@ -27,18 +53,47 @@
 }
 
 @mixin set-col-grid-column($size) {
-  grid-column: span $size;
+  flex-basis: percentage($size / $grid-columns);
+  max-width: percentage($size / $grid-columns); // https://github.com/policygenius/athenaeum/pull/328#issue-142244052
+
+  @supports (display: grid) {
+    flex-basis: auto;
+    max-width: none;
+    grid-column: span $size;
+  }
 }
 
 @mixin make-col-start($start, $columns: $grid-columns) {
-  // https://github.com/rachelandrew/cssgrid-ama/issues/127#issuecomment-371120832
-  // https://codepen.io/stavros-liaskos/pen/GGRjVZ?editors=1100
-  grid-column: #{$start} / span #{$columns};
+  flex-basis: percentage($columns / $grid-columns);
+  max-width: percentage($columns / $grid-columns); // https://github.com/policygenius/athenaeum/pull/328#issue-142244052
+
+  @supports (display: grid) {
+    flex-basis: auto;
+    max-width: none;
+    // https://github.com/rachelandrew/cssgrid-ama/issues/127#issuecomment-371120832
+    // https://codepen.io/stavros-liaskos/pen/GGRjVZ?editors=1100
+    grid-column: #{$start} / span #{$columns};
+  }
+}
+
+@mixin make-ie-col-offset($start, $columns: $grid-columns) {
+  margin-left: percentage($start / $grid-columns);
+
+  @supports (display: grid) {
+    margin-left: 0;
+  }
 }
 
 @mixin make-nest-parent($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
-  display: grid;
-  grid-template-columns: repeat($grid-columns, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+
+  @supports (display: grid) {
+    flex-wrap: nowrap;
+    display: grid; // stylelint-disable-line declaration-block-no-duplicate-properties
+    grid-template-columns: repeat($grid-columns, 1fr);
+  }
+
   padding-right: 0;
   padding-left: 0;
 }

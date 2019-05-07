@@ -11,6 +11,10 @@
     .row.col-#{$j} { // stylelint-disable-line rscss/class-format
       @include make-row($j);
     }
+
+    .ie-row-after-#{$j} { // stylelint-disable-line rscss/class-format
+      @include make-ie-row-after($j);
+    }
   }
 
   @each $breakpoint in map-keys($breakpoints) {
@@ -53,12 +57,26 @@
             }
           }
         }
+
+        @if not ($infix == '' and $i == 0) { // Avoid emitting useless .offset-0
+          .ie-col-offset#{$infix}-#{$i} { // stylelint-disable-line rscss/class-format
+            @include make-ie-col-offset($i, $columns);
+          }
+        }
       }
 
       @for $j from 0 through ($columns - 1) {
         @if not ($infix == '') {
           .row.col#{$infix}-#{$j} { // stylelint-disable-line rscss/class-format
             @include make-row($j);
+          }
+
+          .ie-row-after#{$infix}-#{$j} { // stylelint-disable-line rscss/class-format
+            @include make-ie-row-after($j);
+          }
+
+          .ie-row-after#{$infix}-disable { // stylelint-disable-line rscss/class-format
+            @include make-ie-row-after-disable;
           }
         }
       }
