@@ -55,9 +55,7 @@ If CSS grid [isn't supported](https://caniuse.com/#feat=css-grid) this library u
 
 ## Examples
 
-<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result" data-user="fiskhandlarn" data-slug-hash="vwOOdJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Bootstrap-like grid example">
-  <span>See the Pen <a href="https://codepen.io/fiskhandlarn/pen/vwOOdJ/">
-  CSS Bootstrap-like grid example</a> by fiskhandlarn (<a href="https://codepen.io/fiskhandlarn">@fiskhandlarn</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe height="265" style="width: 100%;" scrolling="no" title="CSS Bootstrap-like grid example" src="//codepen.io/fiskhandlarn/embed/vwOOdJ/?height=265&theme-id=0&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/fiskhandlarn/pen/vwOOdJ/'>CSS Bootstrap-like grid example</a> by fiskhandlarn
+  (<a href='https://codepen.io/fiskhandlarn'>@fiskhandlarn</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
