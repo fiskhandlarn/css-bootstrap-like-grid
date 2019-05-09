@@ -1,5 +1,5 @@
 @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
-  // Common propertfallbacks for all breakpoints
+  // Common properties for all breakpoints
   %grid-column {
     @include set-col-grid-column(12);
     padding-right: $gutter / 2;
