@@ -63,9 +63,11 @@
   }
 }
 
-@mixin make-col-start($start, $columns: $grid-columns) {
+@mixin make-col-start($start, $columns: $grid-columns, $gutter: $grid-gutter-width) {
   flex-basis: percentage($columns / $grid-columns);
   max-width: percentage($columns / $grid-columns); // https://github.com/policygenius/athenaeum/pull/328#issue-142244052
+  padding-right: $gutter / 2;
+  padding-left: $gutter / 2;
 
   @supports (display: grid) {
     flex-basis: auto;
