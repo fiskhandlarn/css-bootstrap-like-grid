@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.2.3 (release 2019-06-24)
+
+- Removed garbage files for npm publish
+
 ## 0.2.2 (release 2019-06-24)
 
 - Add horizontal padding to make-col-start mixin
