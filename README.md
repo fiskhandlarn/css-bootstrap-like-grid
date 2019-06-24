@@ -30,8 +30,8 @@ Import it in your SCSS:
 - `.container-fluid`/`make-container`
 - `.col-*`, `col-*-*`/`make-col` (`make-col-ready` is not needed)
 - `.row`/`make-row` (usually not needed, can be set on a `.col` to force that `.col` down on the next row)
-- `.nest-parent`/`make-nest-parent` (must be set on a `.col` that contains other (nested) `.col`'s)
 - `.col-start-*-*`/`make-col-start` (used instead of `offset-*-*`/`make-col-offset`, the start number should be where the column should start and not the offset from the preceeding column)
+- `.nest-parent` (must be set on a `.col` that contains other (nested) `.col`'s), pass `true` as second or third argument to `make-col` or `make-col-start` to make that column into a `nest-parent`
 - `order-*-first`, `order-*-last`, `order-*-*`,
 
 ## Unsupported Bootstrap features

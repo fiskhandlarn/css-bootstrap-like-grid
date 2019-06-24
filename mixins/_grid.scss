@@ -46,10 +46,15 @@
   margin-right: 0;
 }
 
-@mixin make-col($size, $gutter: $grid-gutter-width) {
+@mixin make-col($size, $isParent: false, $gutter: $grid-gutter-width) {
   @include set-col-grid-column($size);
-  padding-right: $gutter / 2;
-  padding-left: $gutter / 2;
+
+  @if $isParent {
+    @include make-nest-parent($size);
+  } @else {
+    padding-right: $gutter / 2;
+    padding-left: $gutter / 2;
+  }
 }
 
 @mixin set-col-grid-column($size) {
@@ -63,11 +68,16 @@
   }
 }
 
-@mixin make-col-start($start, $columns: $grid-columns, $gutter: $grid-gutter-width) {
+@mixin make-col-start($start, $columns: $grid-columns, $isParent: false, $gutter: $grid-gutter-width) {
   flex-basis: percentage($columns / $grid-columns);
   max-width: percentage($columns / $grid-columns); // https://github.com/policygenius/athenaeum/pull/328#issue-142244052
-  padding-right: $gutter / 2;
-  padding-left: $gutter / 2;
+
+  @if $isParent {
+    @include make-nest-parent($columns);
+  } @else {
+    padding-right: $gutter / 2;
+    padding-left: $gutter / 2;
+  }
 
   @supports (display: grid) {
     flex-basis: auto;
@@ -89,13 +99,12 @@
 @mixin make-nest-parent($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
   display: flex;
   flex-wrap: wrap;
+  padding-right: 0;
+  padding-left: 0;
 
   @supports (display: grid) {
     flex-wrap: nowrap;
     display: grid; // stylelint-disable-line declaration-block-no-duplicate-properties
     grid-template-columns: repeat($grid-columns, 1fr);
   }
-
-  padding-right: 0;
-  padding-left: 0;
 }
