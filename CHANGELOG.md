@@ -6,7 +6,7 @@
 
 ## 0.2.2 (release 2019-06-24)
 
-- Add horizontal padding to make-col-start mixin
+- Added horizontal padding to make-col-start mixin
 
 ## 0.2.1 (released 2019-05-07)
 
