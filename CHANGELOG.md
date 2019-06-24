@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.2.4 (release 2019-06-24)
+
+- Fixed padding for nest-parent's
+
 ## 0.2.3 (release 2019-06-24)
 
 - Removed garbage files for npm publish
